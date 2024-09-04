@@ -28,9 +28,9 @@ listName.addEventListener("click", (e) => {
         const previouslySelected = listName.querySelector(
             ".list__text--selected"
         );
-        if (previouslySelected) {
+        if (previouslySelected) 
             previouslySelected.classList.remove("list__text--selected");
-        }
+        
         blockName.textContent = selectedOption.textContent;
         selectedOption.classList.add("list__text--selected");
         listName.classList.remove("name__list--show");
