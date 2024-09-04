@@ -1,23 +1,23 @@
 :root {
     --primary-color: #111315;
-    --secondary-color: #1A1D1F;
-    --tertiary-color: #272B30;
+    --secondary-color: #1a1d1f;
+    --tertiary-color: #272b30;
+    --quaternary-color: #2d3136;
 
-    --primary-text-color: #FCFCFC;
+    --primary-text-color: #fcfcfc;
 
     --radio-minor: 0.35em;
+    --radio-major: 0.55em;
+
     /* 
-    --quaternary-color: #e6f2ff;
     --opacity-color: #B9BDC2;
 
-    --radio-major: 0.55em;
 
     --simple-shadow: 0 0 0.1em var(--tertiary-color);
     --intense-shadow: 0 0 0.2em var(--tertiary-color);
     --composite-shadow: inset var(--simple-shadow), var(--simple-shadow);
     --input-shadow: inset 0 0 0.1em var(--opacity-color),
         0 0 0.1em var(--opacity-color); */
-
 }
 
 @font-face {
@@ -44,8 +44,7 @@
 body {
     background-color: var(--primary-color);
     color: var(--primary-text-color);
-    font-family: Nunito, 'Times New Roman', Times, serif;
-
+    font-family: Nunito, "Times New Roman", Times, serif;
 }
 
 .header {
@@ -55,12 +54,11 @@ body {
 }
 
 .header__hamburger {
-    margin-left: .7em;
+    margin-left: 0.7em;
     border: none;
     background-color: var(--secondary-color);
     cursor: pointer;
     display: none;
-
 }
 
 .hamburger__icon {
@@ -73,7 +71,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 1em;
-    padding-left: .7em;
+    padding-left: 0.7em;
 }
 
 .nav__list,
@@ -102,30 +100,30 @@ body {
 
 .nav__list {
     padding: 0;
-    gap: .5em;
+    gap: 0.5em;
     margin: 0;
 }
 
 .list__item {
     list-style: none;
-
 }
 
 .item__link {
-    margin: .7em 0 .7em 0;
-    padding: 0 .7em 0 .7em;
+    margin: 0.7em 0 0.7em 0;
+    padding: 0 0.7em 0 0.7em;
     height: 2.2em;
     line-height: 2.2em;
     align-items: center;
     align-content: center;
-    gap: .5em;
+    gap: 0.5em;
     display: flex;
     text-decoration: none;
     color: var(--primary-text-color);
-    opacity: .6;
+    opacity: 0.6;
     font-weight: 600;
 }
 
+.name__title,
 .item__link--selected {
     background-color: var(--tertiary-color);
     border-radius: var(--radio-minor);
@@ -146,8 +144,81 @@ body {
     min-width: 1.2em;
 }
 
+.block {
+    display: flex;
+    background-color: var(--secondary-color);
+    margin: 0.5em;
+    border-radius: var(--radio-major);
+    padding: 1em;
+    gap: 1em;
+}
+
+.graphic__name {
+    position: relative;
+}
+
+.list__text,
+.name__title {
+    margin: 0;
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    padding: 0 0.7em 0 0.7em;
+    font-size: 1.1em;
+}
+
+.name__title {
+    background-color: var(--quaternary-color);
+    box-shadow: 1px 1px 1px #121416, -1px -1px 1px #484e56;
+    cursor: pointer;
+}
+
+.name__list {
+    background-color: var(--tertiary-color);
+    margin-top: 0.5em;
+    border-radius: var(--radio-minor);
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.name__list--show {
+    display: block;
+}
+
+.list__text {
+    opacity: 0.6;
+}
+
+.list__text:first-child {
+    border-radius: var(--radio-minor) var(--radio-minor) 0 0;
+}
+
+.list__text:last-child {
+    border-radius: 0 0 var(--radio-minor) var(--radio-minor);
+}
+
+.list__text:hover {
+    opacity: 1;
+    border-radius: var(--radio-minor);
+    background-color: var(--quaternary-color);
+    box-shadow: 1px 1px 1px #121416, -1px -1px 1px #484e56;
+}
+
+.list__text--selected {
+    display: none;
+}
+
+.graphic__picture {
+    margin-top: 1em;
+    display: block;
+}
+
 @media (max-width: 900px) {
-    .nav__logo--active{
+    .nav__logo--active {
         position: absolute;
         top: 0;
         padding: 2em 0 1em 1em;
@@ -158,8 +229,8 @@ body {
         justify-content: start;
         align-items: center;
         z-index: 9;
-        
     }
+
     .header__hamburger {
         display: block;
     }
@@ -173,7 +244,7 @@ body {
         align-items: start;
         justify-content: start;
         padding: 1em;
-        gap: .5em;
+        gap: 0.5em;
         height: calc(100vh - 5em);
         top: 5em;
         left: 0;
