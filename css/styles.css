@@ -153,15 +153,13 @@ body {
 
 .block__graphic {
     flex-basis: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .graphic__name {
     position: relative;
-}
-
-.graphic__picture {
-    margin: auto;
-    width: fit-content;
 }
 
 .list__text,
@@ -239,8 +237,8 @@ body {
 }
 
 .graphic__picture {
-    margin-top: 1em;
     display: block;
+    margin-top: 1em;
 }
 
 .form__size {
@@ -253,6 +251,7 @@ body {
     border: 3px solid var(--on-primary-color);
     box-shadow: 1px 1px 1px #121416, -1px -1px 1px #484e56,
         inset 1px 1px 1px #121416, inset -1px -1px 1px #484e56;
+    gap: 0.5em;
 }
 
 .size__title {
@@ -276,7 +275,7 @@ body {
 }
 .input__input,
 .size__submit {
-    height: 2.1em;
+    height: 2.2em;
     border-radius: var(--radio-minor);
     color: var(--text-color);
 }
@@ -285,7 +284,7 @@ body {
     border: 1px solid var(--primary-color);
     outline: none;
     opacity: 0.6;
-    padding-left: .8em;
+    padding-left: 0.8em;
 }
 .input__input:enabled {
     opacity: 1;
