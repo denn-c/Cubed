@@ -284,7 +284,7 @@ body {
     border: 1px solid var(--primary-color);
     outline: none;
     opacity: 0.6;
-    padding-left: 0.8em;
+    font-weight: 800;
 }
 .input__input:enabled {
     opacity: 1;
