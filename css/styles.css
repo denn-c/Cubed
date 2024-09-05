@@ -260,42 +260,42 @@ body {
     text-align: center;
     font-weight: 800;
     text-transform: uppercase;
-    padding: 0 .3em;
+    padding: 0 0.3em;
     background-color: var(--card);
 }
-.size__input{
+.size__input {
     display: flex;
     flex-direction: column;
-    gap: .2em;
+    gap: 0.2em;
 }
 .input__name,
-.input__input{
+.input__input {
     width: 100%;
     text-align: center;
     font-size: 1.1em;
 }
 .input__input,
-.size__submit{
+.size__submit {
     height: 2.1em;
     border-radius: var(--radio-minor);
     color: var(--text-color);
-
 }
-.input__input{
-    background-color: #15181A;
+.input__input {
+    background-color: #15181a;
     border: 1px solid var(--primary-color);
     outline: none;
     opacity: 0.6;
+    padding-left: .8em;
 }
-.input__input:enabled{
+.input__input:enabled {
     opacity: 1;
     border: 2px solid var(--on-primary-color);
 }
-.input__input:focus{
+.input__input:focus {
     box-shadow: 1px 1px 1px #121416, -1px -1px 1px #484e56,
         inset 1px 1px 1px #121416, inset -1px -1px 1px #484e56;
 }
-.size__submit{
+.size__submit {
     background-color: var(--on-primary-color);
     border: none;
     box-shadow: 1px 1px 1px #121416, -1px -1px 1px #484e56;
@@ -354,5 +354,25 @@ body {
 
     .nav__list:nth-child(2) .link__img {
         max-width: 1.4em;
+    }
+}
+
+@media (max-width: 400px) {
+    .block__form {
+        width: 100%;
+    }
+
+    .form__size {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    .size__input {
+        flex: 1 0 1em;
+    }
+
+    .size__submit {
+        flex: 1 0 100%;
     }
 }
