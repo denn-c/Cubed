@@ -24,9 +24,9 @@
                 <ul class="nav__list">
                     <li class="list__item">
                         <a
-                            href="/"
+                            href="#/bloquetas"
                             class="item__link item__link--selected"
-                            data-target="bloquetas.html">
+                            data-link>
                             <img
                                 src="asset/icons/brick.svg"
                                 alt="Icono de ladrillo"
@@ -35,10 +35,7 @@
                         </a>
                     </li>
                     <li class="list__item">
-                        <a
-                            href="/fierros"
-                            class="item__link"
-                            data-target="fierros.html">
+                        <a href="#/fierros" class="item__link" data-link>
                             <img
                                 src="asset/icons/steel.svg"
                                 alt="Icono de fierro"
@@ -47,10 +44,7 @@
                         </a>
                     </li>
                     <li class="list__item">
-                        <a
-                            href="/agregado"
-                            class="item__link"
-                            data-target="agregado.html">
+                        <a href="#/agregado" class="item__link" data-link>
                             <img
                                 src="asset/icons/gravel.svg"
                                 alt="Icono de grava"
@@ -59,10 +53,7 @@
                         </a>
                     </li>
                     <li class="list__item">
-                        <a
-                            href="/instalaciones"
-                            class="item__link"
-                            data-target="instalaciones.html">
+                        <a href="#/instalaciones" class="item__link" data-link>
                             <img
                                 src="asset/icons/plumbing.svg"
                                 alt="Icono de Accesorios"
@@ -100,6 +91,7 @@
             </nav>
         </header>
         <main id="content"></main>
-        <script src="js/main.js"></script>
+        <script type="module" src="js/router.js"></script>
+        <script type="module" src="js/main.js"></script>
     </body>
 </html>
