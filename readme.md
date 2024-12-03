@@ -1,1 +1,1 @@
-[Cubed](https://denn-c.github.io/Cubed/)
+[Cubed](https://denn-c.github.io/cubed/)
