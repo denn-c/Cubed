@@ -13,7 +13,7 @@
     src: url(../asset/fonts/BalooThambi2-Medium.ttf);
 }
 
-* {
+body {
     background-color: var(--main-color);
     color: var(--text-color);
     font-family: BalooThambi2, 'Times New Roman', Times, serif;
@@ -32,10 +32,16 @@
     border: none;
     cursor: pointer;
     box-shadow: var(--neumorphism);
+    background-color: transparent;
     border-radius: 0.3em;
     min-width: 2.2em;
     height: 2.2em;
     display: none;
+}
+
+.hamburger__icon {
+    max-width: 1em;
+    margin: 0 auto;
 }
 
 .header__nav {
@@ -83,40 +89,40 @@
 }
 
 @media (max-width: 670px) {
-
     .header__hamburger {
         display: block;
     }
 
     .nav__list:first-child {
+        background-color: var(--main-color);
         position: absolute;
         flex-direction: column;
         min-width: 20em;
         max-width: 90vw;
         justify-content: start;
         padding: 1em;
-        height: calc(100vh - 3.6em);
-        top: 3.6em;
+        height: calc(100vh - 3.9em);
+        top: 3.9em;
         left: 0;
         transition: transform 0.3s ease-in-out;
-        z-index: -10;
+        transform: translateX(-100%);
         box-shadow: var(--neumorphism);
     }
 
-    .header__nav{
-        justify-content: end;
+    .nav__list.nav__list--show {
+        transform: translateX(0);
     }
 
-    /* .nav__list.nav__list--show {
-        transform: translateX(0);
-    } */
+    .header__nav {
+        justify-content: end;
+    }
 
     .nav__list:first-child .list__item {
         width: 100%;
     }
 
     .nav__list:first-child .item__link {
-        padding: .2em .5em;
+        padding: 0.2em 0.5em;
         margin: 0;
     }
 
