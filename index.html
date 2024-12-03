@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="shortcut icon"
+            href="asset/icons/favicon.png"
+            type="image/x-icon" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/pages/electricidad.css">
+        <title>Cubed</title>
+    </head>
+    <body>
+        <header class="header">
+            <button class="header__hamburger" aria-label="Toggle menu">
+                <img
+                    src="asset/icons/bars-solid.svg"
+                    alt="Menu"
+                    class="hamburger__icon" />
+            </button>
+            <nav class="header__nav">
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="#/bloquetas" class="item__link">
+                            <img
+                                src="asset/icons/brick.svg"
+                                alt="Icono de ladrillo"
+                                class="link__img" />
+                            Bloquetas
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#/fierros" class="item__link">
+                            <img
+                                src="asset/icons/steel.svg"
+                                alt="Icono de fierro"
+                                class="link__img" />
+                            Fierros
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#/agregado" class="item__link">
+                            <img
+                                src="asset/icons/gravel.svg"
+                                alt="Icono de grava"
+                                class="link__img" />
+                            Agregado
+                        </a>
+                    </li>
+                    <li class="list__item sub">
+                        <img
+                            src="asset/icons/screwdriver-wrench.svg"
+                            alt="Icono de Accesorios"
+                            class="link__img" />
+                        Instalaciones
+                        <ul class="sub__list">
+                            <li class="list__item">
+                                <a href="#/electricidad" class="item__link">
+                                    <img
+                                        src="asset/icons/electrical-house.svg"
+                                        alt="Icono de electricidad"
+                                        class="link__img" />
+                                    Electricidad
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#/camaras" class="item__link">
+                                    <img
+                                        src="asset/icons/camera-cctv.svg"
+                                        alt="Icono de Gasfitería"
+                                        class="link__img" />
+                                    Cámaras
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#/gasfiteria" class="item__link">
+                                    <img
+                                        src="asset/icons/plumbing-house.svg"
+                                        alt="Icono de Gasfitería"
+                                        class="link__img" />
+                                    Gasfitería
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav__list">
+                    <li class="list__item">
+                        <a href="" class="item__link">
+                            <img
+                                src="asset/icons/bell-solid.svg"
+                                alt="Icono de notificaciones"
+                                class="link__img" />
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="" class="item__link">
+                            <img
+                                src="asset/icons/folder-solid.svg"
+                                alt="Icono de carpeta"
+                                class="link__img" />
+                        </a>
+                    </li>
+                    <li class="list__item">
+                        <a href="" class="item__link">
+                            <img
+                                src="asset/icons/gear-solid.svg"
+                                alt="Icono de configuraciones"
+                                class="link__img" />
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main id="content" class="main"></main>
+        <script type="module" src="js/router.js"></script>
+        <script type="module" src="js/app.js"></script>
+    </body>
+</html>
