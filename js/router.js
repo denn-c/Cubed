@@ -1,5 +1,3 @@
-// js/router.js
-
 const routes = {
     '/bloquetas': 'pages/bloquetas.html',
     '/fierros': 'pages/fierros.html',
@@ -7,14 +5,12 @@ const routes = {
     '/instalaciones': 'pages/instalaciones.html',
 }
 
-// Función para manejar el cambio de ruta
 export async function router() {
-    const hash = window.location.hash.slice(1) || '/bloquetas'
-    const route = routes[hash] || 'pages/404.html' // Ruta por defecto si no se encuentra la ruta
+    const hash = window.location.hash.slice(1) || '/instalaciones'
+    const route = routes[hash] || 'index.html'
     const app = document.getElementById('content')
 
     try {
-        // Cargar el contenido del archivo HTML
         const response = await fetch(route)
         if (response.ok) {
             app.innerHTML = await response.text()
@@ -26,6 +22,5 @@ export async function router() {
     }
 }
 
-// Escuchar los eventos de cambio en el hash
 window.addEventListener('hashchange', router)
 window.addEventListener('load', router)
