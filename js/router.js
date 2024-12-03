@@ -17,6 +17,13 @@ export async function router() {
         } else {
             app.innerHTML = '<h1>Error 404: Página no encontrada</h1>'
         }
+
+        const links = document.querySelectorAll('.item__link')
+        links.forEach((link) => link.classList.remove('item__link--active'))
+        const activeLink = document.querySelector(`a[href="#${hash}"]`)
+        if (activeLink) {
+            activeLink.classList.add('item__link--active')
+        }
     } catch (error) {
         app.innerHTML = '<h1>Error al cargar la página</h1>'
     }
