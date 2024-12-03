@@ -155,7 +155,7 @@ body {
 
 .main{
     box-shadow: var(--neumorphism-raised);
-    margin: 1em;
+    margin: .5em;
 }
 
 @media (max-width: 670px) {
