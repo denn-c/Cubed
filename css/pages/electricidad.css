@@ -119,8 +119,9 @@
     display: inline;
 }
 .grounding__check{
-    background-color: var(--main-color);
-    appearance: none;
+    /* background-color: var(--main-color) !important; */
+    background-color: transparent;
+    /* appearance: none; */
     box-shadow: var(--neumorphism-inset);
     width: 1.2em;
     height: 1.2em;
@@ -130,7 +131,7 @@
     outline: none;
 }
 
-.grounding__check:checked::after {
+.grounding__check:checked::before {
   content: '✔';
   display: block;
   width: 100%;
@@ -142,6 +143,7 @@
   color: cyan;
   text-align: center;
   z-index: 10;
+  opacity: 1;
 }
 
 .table__data:last-child{
