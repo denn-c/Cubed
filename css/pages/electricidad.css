@@ -15,7 +15,29 @@
 
 }
 
-.title--mt{
+.customer{
     /* background-color: red; */
-    margin: 0;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    /* width: 100%; */
+}
+
+.customer--input{
+    background-color: transparent;
+    box-shadow: var(--neumorphism-inset);
+    border: none;
+    border-radius: var(--radio);
+    height: var(--sise);
+    outline: none;
+    padding-left: .5em;
+    color: var(--text-color);
+}
+.customer--input:first-child {
+    flex: 10 0 8em; 
+}    
+
+.customer--input:last-child {
+    flex: 1 0 6em; 
+    min-width: 6em;
 }
