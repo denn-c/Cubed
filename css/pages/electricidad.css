@@ -138,7 +138,7 @@
   position: absolute;
   margin: auto;
   top: 0.1em;
-  color: white;
+  color: var(--text-color);
   text-align: center;
 }
 
