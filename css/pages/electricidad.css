@@ -14,14 +14,14 @@
     --radio: 0.3em;
 }
 
-.customer {
+.form__employer {
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
     margin: 1em 0;
 }
 
-.customer__input {
+.employer__input {
     background-color: transparent;
     box-shadow: var(--neumorphism-inset);
     border: none;
@@ -31,17 +31,17 @@
     padding-left: 0.5em;
     color: var(--text-color);
 }
-.customer__input:first-child {
+.employer__input:first-child {
     flex: 10 0 7em;
     min-width: 6em;
 }
 
-.customer__input:last-child {
+.employer__input:last-child {
     flex: 1 0 5.5em;
     min-width: 5.5em;
 }
 
-.table__container{
+.form__table{
     box-shadow: var(--neumorphism-raised);
     border-radius: var(--radio);
     overflow: hidden;
@@ -53,7 +53,6 @@
 }
 
 .table__caption{
-    /* background-color: #000000; */
     font-size: 1.5em;
     padding: 0.2em;
 }
@@ -71,18 +70,44 @@
 .table__row:nth-child(odd) {
     background-color: #243646;
 }
+
 .table__data {
-    padding: 0.4em;
+    border-top: 1px solid var(--glow-color);
 }
-.table__data:last-child {
-    text-align: right;
-}
+
 
 .header__head + .header__head,
 .table__data + .table__data {
     border-left: 1px solid var(--glow-color);
 }
 
-.table__data {
-    border-top: 1px solid var(--glow-color);
+.table__data:nth-child(2) {
+    text-align: center;
+    white-space: nowrap;
+}
+.table__amount{
+    background-color: var(--main-color);
+    border: none;
+    box-shadow: var(--neumorphism-inset);
+    color: var(--text-color);
+    padding: .3em;
+    border-radius: var(--radio);
+    width: 2.5em;
+    text-align: center;
+    outline: none;
+}
+
+.table__data:last-child{
+    text-align: center;
+}
+
+.table__button{
+    background-color: var(--main-color);
+    border: none;
+    box-shadow: var(--neumorphism-raised);
+    border-radius: 100%;
+    width: 1.2em;
+    height: 1.2em;
+    padding: .3em;
+    outline: none;
 }

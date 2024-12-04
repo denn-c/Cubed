@@ -1,63 +1,82 @@
-<form action="#" class="customer">
-    <input type="text" placeholder="Cliente" class="customer__input" />
-    <input type="tel" placeholder="Cel." class="customer__input" />
+<form action="#" class="form">
+    <div class="form__employer">
+        <input type="text" placeholder="Cliente" class="employer__input" />
+        <input type="tel" placeholder="Cel." class="employer__input" />
+    </div>
+    <div class="form__table">
+        <table class="table">
+            <caption class="table__caption">
+                MATERIALES
+            </caption>
+            <thead class="table__header">
+                <tr class="header__row">
+                    <th class="header__head">MATERIAL</th>
+                    <th class="header__head">CANTIDAD</th>
+                    <th class="header__head"></th>
+                </tr>
+            </thead>
+            <tbody class="table__body">
+                <tr class="table__row">
+                    <td class="table__data">Cajas Rectangulares</td>
+                    <td class="table__data">
+                        <input type="number" value="32" class="table__amount" />
+                        <span>Unidades</span>
+                    </td>
+                    <td class="table__data">
+                        <button type="button" class="table__button">
+                            <img src="../asset/icons/xmark.svg" alt="Cerrar" class="table__img">
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__data">Cajas Octogonales</td>
+                    <td class="table__data">
+                        <input type="number" value="8" class="table__amount" />
+                        <span>Unidades</span>
+                    </td>
+                     <td class="table__data">
+                        <button type="button" class="table__button">
+                            <img src="../asset/icons/xmark.svg" alt="Cerrar" class="table__img">
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__data">Tubo 3/4 pvc electricidad</td>
+                    <td class="table__data">
+                        <input type="number" value="40" class="table__amount" />
+                        <span>Unidades</span>
+                    </td>
+                     <td class="table__data">
+                        <button type="button" class="table__button">
+                            <img src="../asset/icons/xmark.svg" alt="Cerrar" class="table__img">
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__data">Curva 3/4 pvc electricidad</td>
+                    <td class="table__data">
+                        <input type="number" value="60" class="table__amount" />
+                        <span>Unidades</span>
+                    </td>
+                    <td class="table__data">
+                        <button type="button" class="table__button">
+                            <img src="../asset/icons/xmark.svg" alt="Cerrar" class="table__img">
+                        </button>
+                    </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__data">Pegamento pvc mediano</td>
+                    <td class="table__data">
+                        <input type="number" value="1" class="table__amount" />
+                        <span>Unidades</span>
+                    </td>
+                     <td class="table__data">
+                        <button type="button" class="table__button">
+                            <img src="../asset/icons/xmark.svg" alt="Cerrar" class="table__img">
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </form>
-<div class="table__container">
-    <table class="table">
-        <caption class="table__caption">
-            MATERIALES
-        </caption>
-        <thead class="table__header">
-            <tr class="header__row">
-                <th class="header__head">MATERIAL</th>
-                <th class="header__head">CANTIDAD</th>
-                <th class="header__head">
-                    <select name="tipo" id="tipo">
-                        <option value="techo">Techo</option>
-                        <option value="techo">Interior</option>
-                        <option value="techo">Todos</option>
-                    </select>
-                </th>
-            </tr>
-        </thead>
-        <tbody class="table__body">
-            <tr class="table__row">
-                <td class="table__data">Cajas Rectangulares</td>
-                <td class="table__data">
-                    <input type="number" value="14">
-                </td>
-                <td class="table__data">
-                    <button type="button">quitar</button>
-                </td>
-            </tr>
-            <tr class="table__row">
-                <td class="table__data">Cajas Octogonales</td>
-                <td class="table__data">10</td>
-                <td class="table__data">
-                    <button type="button">quitar</button>
-                </td>
-            </tr>
-            <tr class="table__row">
-                <td class="table__data">Tubo 3/4 pvc electricidad</td>
-                <td class="table__data">70</td>
-                <td class="table__data">
-                    <button type="button">quitar</button>
-                </td>
-            </tr>
-            <tr class="table__row">
-                <td class="table__data">Curva 3/4 pvc electricidad</td>
-                <td class="table__data">70</td>
-                <td class="table__data">
-                    <button type="button">quitar</button>
-                </td>
-            </tr>
-            <tr class="table__row">
-                <td class="table__data">Pegamento pvc mediano</td>
-                <td class="table__data">1</td>
-                <td class="table__data">
-                    <button type="button">quitar</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
