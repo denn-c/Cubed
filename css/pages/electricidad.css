@@ -74,6 +74,7 @@
 .table__data {
     border-top: 1px solid var(--glow-color);
     padding: 0 .3em;
+    font-size: .8em;
 }
 
 
