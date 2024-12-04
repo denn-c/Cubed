@@ -74,9 +74,8 @@
 .table__data {
     border-top: 1px solid var(--glow-color);
     padding: 0 .3em;
-    font-size: .8em;
+    font-size: .85em;
 }
-
 
 .header__head + .header__head,
 .table__data + .table__data {
@@ -94,9 +93,12 @@
     color: var(--text-color);
     padding: .3em;
     border-radius: var(--radio);
-    width: 2.5em;
+    width: 2.2em;
     text-align: center;
     outline: none;
+}
+.table__indication{
+    width: 1.6em;
 }
 
 .table__data:last-child{
