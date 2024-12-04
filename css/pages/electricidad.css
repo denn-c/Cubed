@@ -16,11 +16,9 @@
 }
 
 .customer{
-    /* background-color: red; */
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
-    /* width: 100%; */
 }
 
 .customer--input{
@@ -39,7 +37,6 @@
 }    
 
 .customer--input:last-child {
-    flex: 1 0 6em; 
-    min-width: 6em;
-    /* min-width: 6em; */
+    flex: 1 0 5.5em; 
+    min-width: 5.5em;
 }
