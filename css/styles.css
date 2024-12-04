@@ -30,7 +30,7 @@ body {
     display: flex;
     align-items: center;
     box-shadow: var(--neumorphism-raised);
-    padding: 0 0.7em;
+    padding: 0 0.5em;
     gap: 1em;
     height: 3.6em;
 }
@@ -154,7 +154,7 @@ body {
 }
 
 .main{
-    margin: 0.7em;
+    margin: 0.5em;
 }
 
 @media (max-width: 670px) {
