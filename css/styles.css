@@ -154,10 +154,7 @@ body {
 }
 
 .main{
-    box-shadow: var(--neumorphism-raised);
-    border-radius: var(--radio);
-    margin: .5em;
-    padding: .5em;
+    margin: 0.7em;
 }
 
 @media (max-width: 670px) {
