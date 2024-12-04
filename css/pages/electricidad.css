@@ -138,8 +138,10 @@
   position: absolute;
   margin: auto;
   top: 0.1em;
-  color: var(--text-color);
+  background-color: transparent;
+  color: cyan;
   text-align: center;
+  z-index: 10;
 }
 
 .table__data:last-child{
