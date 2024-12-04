@@ -34,10 +34,12 @@
     color: var(--text-color);
 }
 .customer--input:first-child {
-    flex: 10 0 8em; 
+    flex: 10 0 7em; 
+    min-width: 6em;
 }    
 
 .customer--input:last-child {
     flex: 1 0 6em; 
     min-width: 6em;
+    /* min-width: 6em; */
 }
