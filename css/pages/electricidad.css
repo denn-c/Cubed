@@ -66,6 +66,7 @@
 
 .table__cell:nth-child(2) {
     white-space: nowrap;
+    letter-spacing: .3em;
 }
 
 .header__cell + .header__cell,
@@ -104,11 +105,14 @@
 }
 
 .table__button {
-    border-radius: 100%;
     width: 1.7em;
     height: 1.7em;
     padding: 0.6em;
 }
+.table__button--circle{
+    border-radius: 100%;
+}
+
 .table__row:last-child .table__cell:first-child {
     display: table-cell;
     text-align: right;

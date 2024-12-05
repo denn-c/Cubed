@@ -3,6 +3,7 @@
     --shade-color: #121a21;
     --glow-color: #364e62;
     --text-color: #fcfcfc;
+    --primary-color: #0AFFEF;
 
     --neumorphism-raised: 2px 2px 6px var(--shade-color),
         -2px -2px 6px var(--glow-color);
