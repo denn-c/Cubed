@@ -1,41 +1,40 @@
 <form action="#" class="form">
-    <div class="form__employer">
-        <input type="text" placeholder="Cliente" class="employer__input" />
-        <input type="tel" placeholder="Cel." class="employer__input" />
+    <div class="form__customer">
+        <input type="text" placeholder="Cliente" class="customer__data" />
+        <input type="tel" placeholder="Cel." class="customer__data" />
     </div>
-    <div class="form__table">
-        <table class="table">
-            <caption class="table__caption">
+    <div class="form__table-box">
+        <table class="form__table">
+            <caption class="table__title">
                 MATERIALES
             </caption>
             <thead class="table__header">
                 <tr class="header__row">
-                    <th class="header__head">MATERIAL</th>
-                    <th class="header__head">CANTIDAD</th>
-                    <th class="header__head"></th>
+                    <th class="header__cell">MATERIAL</th>
+                    <th class="header__cell">CANTIDAD</th>
+                    <th class="header__cell"></th>
                 </tr>
             </thead>
             <tbody class="table__body">
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tomacorriente triple
-                        <div class="table__grounding-box">
+                        <label class="table__grounding-box" for="grounding">
                             <img
                                 src="asset/icons/electricity-grounding.svg"
                                 alt="Tierra"
-                                class="table__grounding" />
+                                class="table__grounding-img" />
                             <input
                                 type="checkbox"
-                                name="ground"
-                                id="ground"
-                                class="grounding__check" />
-                        </div>
+                                id="grounding"
+                                class="table__grounding-checkbox" />
+                        </label>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -45,25 +44,24 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tomacorriente doble
-                        <div class="table__grounding-box">
+                        <label class="table__grounding-box" for="grounding">
                             <img
                                 src="asset/icons/electricity-grounding.svg"
                                 alt="Tierra"
-                                class="table__grounding" />
+                                class="table__grounding-img" />
                             <input
                                 type="checkbox"
-                                name="ground"
-                                id="ground"
-                                class="grounding__check" />
-                        </div>
+                                id="grounding"
+                                class="table__grounding-checkbox" />
+                        </label>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -73,25 +71,24 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tomacorriente simple
-                        <div class="table__grounding-box">
+                        <label class="table__grounding-box" for="grounding">
                             <img
                                 src="asset/icons/electricity-grounding.svg"
                                 alt="Tierra"
-                                class="table__grounding" />
+                                class="table__grounding-img" />
                             <input
                                 type="checkbox"
-                                name="ground"
-                                id="ground"
-                                class="grounding__check" />
-                        </div>
+                                id="grounding"
+                                class="table__grounding-checkbox" />
+                        </label>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -101,12 +98,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor Triple</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor Triple</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -116,12 +113,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor doble</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor doble</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -131,12 +128,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor simple</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor simple</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -146,12 +143,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor conmutador doble</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor conmutador doble</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -161,12 +158,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor conmutador simple</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor conmutador simple</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -176,12 +173,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tapa ciega rectangular</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Tapa ciega rectangular</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -191,12 +188,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Foco led (3W)</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Foco led (3W)</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -206,12 +203,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Foco led (5W)</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Foco led (5W)</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -221,12 +218,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Foco led (8W)</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Foco led (8W)</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -236,21 +233,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Foco led (
                             <input
                                 type="number"
                                 value="10"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             W)
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -260,12 +257,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Socket</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Socket</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -275,12 +272,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Foco led dicroico</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Foco led dicroico</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -290,12 +287,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Panel led circular 15W</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Panel led circular 15W</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -305,21 +302,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Panel led circular(
                             <input
                                 type="number"
                                 value="20"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             W)
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -329,12 +326,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Panel led cuadrado 15W</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Panel led cuadrado 15W</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -344,21 +341,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Panel led cuadrado(
                             <input
                                 type="number"
                                 value="20"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             W)
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -368,12 +365,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Panel led cuadrado (30x60)</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Panel led cuadrado (30x60)</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -383,12 +380,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Panel led cuadrado (60x60)</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Panel led cuadrado (60x60)</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -398,27 +395,26 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Panel led cuadrado (
                             <input
                                 type="number"
                                 value="120"
-                                class="table__amount table__indication"
-                                style="width: 2.1em" />
+                                class="table__data table__data--indicator table__data--indicator-max" />
                             x
                             <input
                                 type="number"
                                 value="60"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             )
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -428,12 +424,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tapa ciega Octogonal</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Tapa ciega Octogonal</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -443,12 +439,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Interruptor diferencial (40A)</td>
-                    <td class="table__data">
-                        <input type="number" value="8" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Interruptor diferencial (40A)</td>
+                    <td class="table__cell">
+                        <input type="number" value="8" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -458,14 +454,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Interruptor termomagnético (32A)
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="8" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="8" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -475,14 +471,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Interruptor termomagnético (20A)
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="8" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="8" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -492,14 +488,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Interruptor termomagnético (16A)
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="8" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="8" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -509,21 +505,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Interruptor termomagnético (
                             <input
                                 type="number"
                                 value="25"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             A)
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -533,14 +529,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tablero de distribución (10 polos)
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -550,14 +546,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tablero de distribución (2 polos)
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -567,21 +563,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Tablero de distribución (
                             <input
                                 type="number"
                                 value="8"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             polos)
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -591,12 +587,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Caja Rectangular</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Caja Rectangular</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -606,12 +602,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Caja modular</td>
-                    <td class="table__data">
-                        <input type="number" value="32" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Caja modular</td>
+                    <td class="table__cell">
+                        <input type="number" value="32" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -621,12 +617,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Caja Octogonal</td>
-                    <td class="table__data">
-                        <input type="number" value="8" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Caja Octogonal</td>
+                    <td class="table__cell">
+                        <input type="number" value="8" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -636,12 +632,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Caja de paso (20 x 20)</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Caja de paso (20 x 20)</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -651,12 +647,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Caja de paso (10 x 10)</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Caja de paso (10 x 10)</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -666,26 +662,26 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
                             Caja de paso (
                             <input
                                 type="number"
                                 value="15"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             x
                             <input
                                 type="number"
                                 value="15"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             )
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -695,12 +691,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tubo 3/4" pvc electricidad</td>
-                    <td class="table__data">
-                        <input type="number" value="40" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Tubo 3/4" pvc electricidad</td>
+                    <td class="table__cell">
+                        <input type="number" value="40" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -710,12 +706,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Curva 3/4" pvc electricidad</td>
-                    <td class="table__data">
-                        <input type="number" value="60" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Curva 3/4" pvc electricidad</td>
+                    <td class="table__cell">
+                        <input type="number" value="60" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -725,12 +721,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tubo 1" pvc electricidad</td>
-                    <td class="table__data">
-                        <input type="number" value="40" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Tubo 1" pvc electricidad</td>
+                    <td class="table__cell">
+                        <input type="number" value="40" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -740,12 +736,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Curva 1" pvc electricidad</td>
-                    <td class="table__data">
-                        <input type="number" value="60" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Curva 1" pvc electricidad</td>
+                    <td class="table__cell">
+                        <input type="number" value="60" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -755,14 +751,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         Tubo corrugado 3/4 electricidad"
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="60" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="60" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -772,12 +768,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tubo corrugado 1" electricidad</td>
-                    <td class="table__data">
-                        <input type="number" value="60" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Tubo corrugado 1" electricidad</td>
+                    <td class="table__cell">
+                        <input type="number" value="60" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -787,12 +783,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Pegamento pvc mediano</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Pegamento pvc mediano</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -802,12 +798,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Cable THW N° 14AWG</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
+                    <td class="table__cell">Cable THW N° 14AWG</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
                         <span>Rollos</span>
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -817,12 +813,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Cable THW N° 12AWG</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
+                    <td class="table__cell">Cable THW N° 12AWG</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
                         <span>Rollos</span>
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -832,12 +828,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Cable THW N° 10AWG</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
+                    <td class="table__cell">Cable THW N° 10AWG</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
                         <span>Rollos</span>
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -847,21 +843,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
-                            Cable THW N° 
+                            Cable THW N°
                             <input
                                 type="number"
                                 value="8"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             AWG
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -871,12 +867,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Cable CPT N° 8AWG (Tierra)</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
+                    <td class="table__cell">Cable CPT N° 8AWG (Tierra)</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
                         <span>Metros</span>
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -886,21 +882,21 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">
+                    <td class="table__cell">
                         <span>
-                            Cable CPT N° 
+                            Cable CPT N°
                             <input
                                 type="number"
                                 value="12"
-                                class="table__amount table__indication" />
+                                class="table__data table__data--indicator" />
                             AWG
                         </span>
                     </td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -910,12 +906,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Cinta aislante (3M)</td>
-                    <td class="table__data">
-                        <input type="number" value="2" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Cinta aislante (3M)</td>
+                    <td class="table__cell">
+                        <input type="number" value="2" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -925,12 +921,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tornillo stove bolt 5/32" x 3" ó 2"</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        Tornillo stove bolt 5/32" x 3" ó 2"
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
+                    </td>
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -940,12 +938,14 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Tornillo stove bolt 6/32" x 3" ó 2"</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">
+                        Tornillo stove bolt 6/32" x 3" ó 2"
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
+                    </td>
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -955,12 +955,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Hoja sierra</td>
-                    <td class="table__data">
-                        <input type="number" value="1" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Hoja sierra</td>
+                    <td class="table__cell">
+                        <input type="number" value="1" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -970,12 +970,12 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data">Disco de corte concreto 4"</td>
-                    <td class="table__data">
-                        <input type="number" value="2" class="table__amount" />
-                        <span>Unidades</span>
+                    <td class="table__cell">Disco de corte concreto 4"</td>
+                    <td class="table__cell">
+                        <input type="number" value="2" class="table__data" />
+                        Unidad
                     </td>
-                    <td class="table__data">
+                    <td class="table__cell">
                         <button type="button" class="table__button">
                             <img
                                 src="asset/icons/xmark.svg"
@@ -985,8 +985,11 @@
                     </td>
                 </tr>
                 <tr class="table__row">
-                    <td class="table__data" colspan="3">
-                        <input type="submit" value="Echo" class="table__submit">
+                    <td class="table__cell" colspan="3">
+                        <input
+                            type="submit"
+                            value="Echo"
+                            class="table__submit" />
                     </td>
                 </tr>
             </tbody>
