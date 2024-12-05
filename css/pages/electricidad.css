@@ -122,13 +122,15 @@
 .table__button--success{
     padding: .4em;
 }
-.table__row:last-child .table__cell:first-child {
+.table__foot .table__cell:first-child {
     display: table-cell;
     text-align: right;
 }
 
 .table__submit {
-    height: 100%;
+    height: 70%;
     padding: 0 1em;
     border-radius: 1.5em;
+    background-color: var(--primary-color);
+    color: #000;
 }
