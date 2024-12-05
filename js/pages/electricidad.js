@@ -17,6 +17,8 @@ cellAmount.forEach((cell) => {
         () => (amountInput.value = amountInput.value.replace(/[^0-9]/g, ''))
     )
 
+    amountInput.addEventListener('focus', () => amountInput.select())
+
     decrementButton.addEventListener('click', () => {
         let currentValue = parseInt(amountInput.value, 10) || 0
         amountInput.value = Math.max(1, currentValue - 1)
