@@ -20,6 +20,14 @@
     flex: 1 0 5.5em;
     min-width: 5.5em;
 }
+.form__task{
+    box-shadow: var(--neumorphism-raised);
+    padding: .5em;
+    display: flex;
+    gap: .5em;
+    margin-bottom: 1em;
+}
+
 
 .form__table-box {
     box-shadow: var(--neumorphism-raised);
@@ -96,7 +104,7 @@
     margin-right: .5em;
 }
 
-.table__bookmark-box {
+.form__checkbox-box {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -108,7 +116,7 @@
     max-width: 1.8em;
     margin: auto 0;
 }
-.table__bookmark-checkbox {
+.form__checkbox {
     height: 1.3em;
     width: 1.3em;
     min-width: 1.3em;
