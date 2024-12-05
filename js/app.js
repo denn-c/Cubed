@@ -1,8 +1,11 @@
-const hamburger = document.querySelector('.header__hamburger')
+const menuButton = document.querySelector('.header__menu-button')
 const navMenu = document.querySelector('.nav__list:first-child')
-const navItem = document.querySelectorAll('.nav__list:first-child .item__link')
+const navItem = document.querySelectorAll('.nav__list:first-child .nav__link')
 
-hamburger.addEventListener('click', () =>
+console.log(menuButton);
+
+
+menuButton.addEventListener('click', () =>
     navMenu.classList.toggle('nav__list--show')
 )
 
@@ -13,7 +16,12 @@ navItem.forEach((item) =>
 )
 
 document.addEventListener('click', (e) => {
-    if (![navMenu, hamburger].some((element) => element.contains(e.target)))
+    if (![navMenu, menuButton].some((element) => element.contains(e.target)))
         navMenu.classList.remove('nav__list--show')
 })
 
+window.addEventListener('scroll', () => {
+    if (navMenu.classList.contains('nav__list--show')) 
+        navMenu.classList.remove('nav__list--show')
+    
+})

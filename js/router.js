@@ -33,7 +33,9 @@ export async function router() {
 
         const links = document.querySelectorAll('.item__link')
         links.forEach((link) => link.classList.remove('item__link--active'))
-        const mainItem = document.querySelector('.list__item.sub')
+        const mainItem = document.querySelector(
+            '.nav__item.nav__item--submenu'
+        )
         if (['/electricidad', '/gasfiteria', '/camaras'].includes(hash)) {
             mainItem.classList.add('item__link--active')
         } else {
