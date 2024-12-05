@@ -66,7 +66,7 @@
 
 .table__cell:nth-child(2) {
     white-space: nowrap;
-    letter-spacing: .3em;
+    letter-spacing: 0.3em;
 }
 
 .header__cell + .header__cell,
@@ -85,23 +85,26 @@
     width: 1.7em;
 }
 
-.table__data--indicator-max{
-    width: 2.1em; 
+.table__data--indicator-max {
+    width: 2.1em;
 }
 
-.table__grounding-box {
-    width: 3em;
-    min-width: 3em;
+.table__bookmark-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
 }
 
-.table__grounding-img {
-    max-width: 1.1em;
-    display: inline;
+.table__bookmark-img {
+    height: 1.1em;
+    max-width: 1.8em;
+    margin: auto 0;
 }
-.table__grounding-checkbox {
-    margin-left: 0.2em;
-    width: 1.3em;
+.table__bookmark-checkbox {
     height: 1.3em;
+    width: 1.3em;
+    min-width: 1.3em;
 }
 
 .table__button {
@@ -109,7 +112,7 @@
     height: 1.7em;
     padding: 0.6em;
 }
-.table__button--circle{
+.table__button--circle {
     border-radius: 100%;
 }
 
