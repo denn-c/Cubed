@@ -117,12 +117,11 @@
 .table__button {
     width: 1.7em;
     height: 1.7em;
-    padding: 0.6em;
+    padding: 0.5em;
 }
-.table__button--circle {
-    border-radius: 100%;
+.table__button--success{
+    padding: .4em;
 }
-
 .table__row:last-child .table__cell:first-child {
     display: table-cell;
     text-align: right;
