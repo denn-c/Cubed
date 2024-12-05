@@ -98,7 +98,7 @@
     outline: none;
 }
 .table__indication {
-    width: 1.6em;
+    width: 1.7em;
 }
 .table__data:first-child {
     display: flex;
@@ -156,8 +156,8 @@
     border: none;
     box-shadow: var(--neumorphism-raised);
     border-radius: 100%;
-    width: 1.2em;
-    height: 1.2em;
-    padding: 0.3em;
+    width: 1.7em;
+    height: 1.7em;
+    padding: 0.6em;
     outline: none;
 }
