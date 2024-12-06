@@ -31,10 +31,10 @@ cellAmount.forEach((cell) => {
 })
 
 const typeWork = {
-    piped: [32, 36, 39, 42, 43, 51, 63, 65],
-    inside: [2, 3, 6, 7, 8, 9, 11, 12, 16, 27, 28, 29, 30, 52, 53, 60, 61, 62],
-    roof: [38, 42, 43, 44, 45, 51, 63],
-    rural: [4, 10, 17, 29, 35, 58, 60, 64],
+    piped: [33, 37,40, 43, 44, 52, 64, 66],
+    inside: [3, 4, 7, 8, 9, 10, 12, 13, 17,27, 28, 29, 30, 31, 53, 54, 61, 62, 63, 67],
+    roof: [39, 43, 44, 45, 46, 52, 64],
+    rural: [5, 11, 18, 30, 36, 59, 61, 65],
 }
 
 const deselectedTable = document.querySelector('.table__body--deselected')
@@ -95,31 +95,42 @@ document.querySelectorAll('.table__button--move').forEach((button) => {
     })
 })
 
-document
-    .querySelector('.table__data--search')
-    .addEventListener('input', (event) => {
-        const searchValue = event.target.value.toLowerCase()
-        const rows = document.querySelectorAll(
-            '.table__body--deselected .table__row'
-        )
+const inputSearch = document.querySelector('.table__data--search')
+const buttonDelete = document.querySelector('.table__button--delete')
+const rows = document.querySelectorAll('.table__body--deselected .table__row')
+const table = document.getElementById('materials')
 
-        rows.forEach((row) => {
-            if (row.id === '1') {
-                row.style.display = ''
-                return
-            }
-            const cell = row.querySelector('.table__cell')
-            if (cell) {
-                const cellText = cell.textContent.toLowerCase()
-                row.style.display = cellText.startsWith(searchValue)
-                    ? ''
-                    : 'none'
-            }
-        })
-    })
+const getCellText = (cell) => {
+    const span = cell.querySelector('span');
+    return span ? span.textContent.toLowerCase().trim() : cell.textContent.toLowerCase().trim();
+};
 
+const updateRowVisibility = (searchValue) => {
+    rows.forEach((row) => {
+        if (row.id === "1") {
+            row.style.display = '';
+            return;
+        }
 
-document.querySelector('.table__data--search').addEventListener('focus', () => {
-    const table = document.getElementById('materials')
+        const cell = row.querySelector('.table__cell');
+        const cellText = cell ? getCellText(cell) : ''
+    
+        
+        row.style.display = cellText.startsWith(searchValue) ? '' : 'none';
+    });
+};
+
+inputSearch.addEventListener('input', (event) => {
+    const searchValue = event.target.value.toLowerCase();
+    updateRowVisibility(searchValue);
+});
+
+inputSearch.addEventListener('focus', () => {
+    table.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+buttonDelete.addEventListener('click', () => {
+    inputSearch.value = '';
+    updateRowVisibility('');
     table.scrollIntoView({ behavior: 'smooth', block: 'start' })
-})
+});
