@@ -37,10 +37,6 @@
     margin-bottom: 1em;
 }
 
-.form__table-box:nth-child(3){
-    border: 2px solid var(--secondary-color);
-}
-
 .form__table {
     width: 100%;
     border-collapse: collapse;
@@ -106,6 +102,7 @@
 }
 .table__data--width {
     width: 100%;
+    height: 75%;
     text-align: start;
     margin-right: 0.5em;
 }
@@ -134,8 +131,12 @@
     padding: 0.5em;
 }
 
+.table__button--delete{
+    height: 75%;
+}
+
 .table__body--deselected .table__button--move,
-.table__button--success {
+.table__button--delete {
     padding: 0.4em;
 }
 .table__foot .table__cell:first-child {
@@ -144,8 +145,8 @@
 }
 
 .table__submit {
-    height: 70%;
-    padding: 0 1em;
+    height: 75%;
+    padding: 0 1.5em;
     border-radius: 1.5em;
     background-color: var(--primary-color);
     color: #000;
