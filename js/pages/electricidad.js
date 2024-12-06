@@ -30,6 +30,8 @@ cellAmount.forEach((cell) => {
     })
 })
 
+// checkbox acciones
+
 const typeWork = {
     piped: [32, 36, 39, 42, 43, 51, 63, 65],
     inside: [2, 3, 6, 7, 8, 9, 11, 12, 16, 27, 28, 29, 30, 52, 53, 60, 61, 62],
@@ -37,50 +39,49 @@ const typeWork = {
     rural: [4, 10, 17, 29, 35, 58, 60, 64],
 }
 
-// Selecciona los cuerpos de las tablas
-const checkboxes = document.querySelectorAll('.form__task .form__checkbox')
-const selectedTableBody = document.querySelector('.table__body--selected')
-const deselectedTableBody = document.querySelector('.table__body--deselected')
-// const checkboxes = document.querySelectorAll('.form__checkbox');
+const deselectedTable = document.querySelector('.table__body--deselected')
+const selectedTable = document.querySelector('.table__body--selected')
 
-// Función para mover filas entre tablas
-function moveRow(rowId, fromTableBody, toTableBody) {
-    const row = fromTableBody.querySelector(`tr[id="${rowId}"]`)
-    if (row) {
-        toTableBody.appendChild(row) // Mueve la fila a la tabla destino
-    }
-}
-
-// Función para actualizar las filas según los checkboxes seleccionados
-function updateRows() {
-    const selectedIds = new Set()
-
-    // Agregar los IDs de los checkboxes seleccionados
-    checkboxes.forEach((checkbox) => {
-        if (checkbox.checked) {
-            const workType = typeWork[checkbox.id]
-            workType.forEach((id) => selectedIds.add(id))
-        }
-    })
-
-    // Mover filas a la tabla correspondiente
-    selectedTableBody.querySelectorAll('.table__row').forEach((row) => {
-        if (!selectedIds.has(Number(row.id))) {
-            moveRow(row.id, selectedTableBody, deselectedTableBody)
-        }
-    })
-
-    deselectedTableBody.querySelectorAll('.table__row').forEach((row) => {
-        if (selectedIds.has(Number(row.id))) {
-            moveRow(row.id, deselectedTableBody, selectedTableBody)
-        }
+const isRowInActiveList = (rowId, excludedCheckboxId) => {
+    return Object.keys(typeWork).some((key) => {
+        const checkbox = document.getElementById(key)
+        return (
+            key !== excludedCheckboxId &&
+            checkbox.checked &&
+            typeWork[key].includes(rowId)
+        )
     })
 }
 
-// Agrega el evento a los checkboxes
-checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', updateRows)
+const moveRows = (checkboxId, isChecked) => {
+    const rowsToMove = typeWork[checkboxId]
+    if (!rowsToMove) return
+
+    rowsToMove.forEach((rowId) => {
+        if (!isChecked && isRowInActiveList(rowId, checkboxId)) {
+            return
+        }
+
+        const row = document.querySelector(
+            `.table__body--deselected .table__row[id="${rowId}"], .table__body--selected .table__row[id="${rowId}"]`
+        )
+
+        if (row) {
+            const targetTable = isChecked ? selectedTable : deselectedTable
+            if (isChecked) {
+                targetTable.appendChild(row)
+            } else {
+                targetTable.insertBefore(row, targetTable.firstChild)
+            }
+        }
+    })
+}
+
+document.querySelectorAll('.form__checkbox').forEach((checkbox) => {
+    moveRows(checkbox.id, checkbox.checked)
+
+    checkbox.addEventListener('change', (event) => {
+        moveRows(event.target.id, event.target.checked)
+    })
 })
 
-// Inicializa el estado de las filas
-updateRows()
