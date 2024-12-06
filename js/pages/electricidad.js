@@ -40,24 +40,20 @@ const typeWork = {
 const deselectedTable = document.querySelector('.table__body--deselected')
 const selectedTable = document.querySelector('.table__body--selected')
 
-const isRowInActiveList = (rowId, excludedCheckboxId) => {
-    return Object.keys(typeWork).some((key) => {
-        const checkbox = document.getElementById(key)
-        return (
+const isRowInActiveList = (rowId, excludedCheckboxId) =>
+    Object.keys(typeWork).some(
+        (key) =>
             key !== excludedCheckboxId &&
-            checkbox.checked &&
+            document.getElementById(key).checked &&
             typeWork[key].includes(rowId)
-        )
-    })
-}
+    )
 
 const updateButtonIcon = (button, isDeselected) => {
-    const img = button.querySelector('.table__img')
-
-    if (isDeselected) {
-        img.src = 'asset/icons/xmark.svg'
-    } else {
-        img.src = 'asset/icons/check.svg'
+    const img = button?.querySelector('.table__img')
+    if (img) {
+        img.src = isDeselected
+            ? 'asset/icons/xmark.svg'
+            : 'asset/icons/check.svg'
     }
 }
 
@@ -66,62 +62,35 @@ const moveRows = (checkboxId, isChecked) => {
     if (!rowsToMove) return
 
     rowsToMove.forEach((rowId) => {
-        if (!isChecked && isRowInActiveList(rowId, checkboxId)) {
-            return
-        }
+        if (!isChecked && isRowInActiveList(rowId, checkboxId)) return
 
-        const row = document.querySelector(
-            `.table__body--deselected .table__row[id="${rowId}"], .table__body--selected .table__row[id="${rowId}"]`
-        )
-
+        const row = document.querySelector(`.table__row[id="${rowId}"]`)
         if (row) {
             const targetTable = isChecked ? selectedTable : deselectedTable
+            targetTable.appendChild(row)
             const button = row.querySelector('.table__button--move')
-            if (isChecked) {
-                targetTable.appendChild(row)
-                updateButtonIcon(button, targetTable !== deselectedTable)
-            } else {
-                targetTable.insertBefore(row, targetTable.firstChild)
-                updateButtonIcon(button, targetTable !== deselectedTable)
-            }
+            updateButtonIcon(button, targetTable !== deselectedTable)
         }
     })
 }
 
 document.querySelectorAll('.form__checkbox--task').forEach((checkbox) => {
     moveRows(checkbox.id, checkbox.checked)
-
     checkbox.addEventListener('change', (event) => {
         moveRows(event.target.id, event.target.checked)
     })
 })
 
-const toggleRow = (row) => {
-    const currentTable = row.closest('.table__body')
-    const targetTable =
-        currentTable === deselectedTable ? selectedTable : deselectedTable
-
-    if (currentTable === deselectedTable) {
-        targetTable.appendChild(row) 
-    } else {
-        targetTable.insertBefore(row, targetTable.firstChild)
-    }
-
-    const button = row.querySelector('.table__button--move')
-    if (button) {
-        updateButtonIcon(button, targetTable !== deselectedTable)
-    }
-}
-
-const addButtonEventListeners = () => {
-    document.querySelectorAll('.table__button--move').forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const row = event.target.closest('.table__row')
-            if (row) {
-                toggleRow(row)
-            }
-        })
+document.querySelectorAll('.table__button--move').forEach((button) => {
+    button.addEventListener('click', (event) => {
+        const row = event.target.closest('.table__row')
+        if (row) {
+            const targetTable =
+                row.closest('.table__body') === deselectedTable
+                    ? selectedTable
+                    : deselectedTable
+            targetTable.appendChild(row)
+            updateButtonIcon(button, targetTable !== deselectedTable)
+        }
     })
-}
-
-addButtonEventListeners()
+})
