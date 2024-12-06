@@ -94,3 +94,32 @@ document.querySelectorAll('.table__button--move').forEach((button) => {
         }
     })
 })
+
+document
+    .querySelector('.table__data--search')
+    .addEventListener('input', (event) => {
+        const searchValue = event.target.value.toLowerCase()
+        const rows = document.querySelectorAll(
+            '.table__body--deselected .table__row'
+        )
+
+        rows.forEach((row) => {
+            if (row.id === '1') {
+                row.style.display = ''
+                return
+            }
+            const cell = row.querySelector('.table__cell')
+            if (cell) {
+                const cellText = cell.textContent.toLowerCase()
+                row.style.display = cellText.startsWith(searchValue)
+                    ? ''
+                    : 'none'
+            }
+        })
+    })
+
+
+document.querySelector('.table__data--search').addEventListener('focus', () => {
+    const table = document.getElementById('materials')
+    table.scrollIntoView({ behavior: 'smooth', block: 'start' })
+})
