@@ -30,8 +30,6 @@ cellAmount.forEach((cell) => {
     })
 })
 
-// checkbox acciones
-
 const typeWork = {
     piped: [32, 36, 39, 42, 43, 51, 63, 65],
     inside: [2, 3, 6, 7, 8, 9, 11, 12, 16, 27, 28, 29, 30, 52, 53, 60, 61, 62],
@@ -53,6 +51,16 @@ const isRowInActiveList = (rowId, excludedCheckboxId) => {
     })
 }
 
+const updateButtonIcon = (button, isDeselected) => {
+    const img = button.querySelector('.table__img')
+
+    if (isDeselected) {
+        img.src = 'asset/icons/xmark.svg'
+    } else {
+        img.src = 'asset/icons/check.svg'
+    }
+}
+
 const moveRows = (checkboxId, isChecked) => {
     const rowsToMove = typeWork[checkboxId]
     if (!rowsToMove) return
@@ -68,16 +76,19 @@ const moveRows = (checkboxId, isChecked) => {
 
         if (row) {
             const targetTable = isChecked ? selectedTable : deselectedTable
+            const button = row.querySelector('.table__button--move')
             if (isChecked) {
                 targetTable.appendChild(row)
+                updateButtonIcon(button, targetTable !== deselectedTable)
             } else {
                 targetTable.insertBefore(row, targetTable.firstChild)
+                updateButtonIcon(button, targetTable !== deselectedTable)
             }
         }
     })
 }
 
-document.querySelectorAll('.form__checkbox').forEach((checkbox) => {
+document.querySelectorAll('.form__checkbox--task').forEach((checkbox) => {
     moveRows(checkbox.id, checkbox.checked)
 
     checkbox.addEventListener('change', (event) => {
@@ -85,3 +96,32 @@ document.querySelectorAll('.form__checkbox').forEach((checkbox) => {
     })
 })
 
+const toggleRow = (row) => {
+    const currentTable = row.closest('.table__body')
+    const targetTable =
+        currentTable === deselectedTable ? selectedTable : deselectedTable
+
+    if (currentTable === deselectedTable) {
+        targetTable.appendChild(row) 
+    } else {
+        targetTable.insertBefore(row, targetTable.firstChild)
+    }
+
+    const button = row.querySelector('.table__button--move')
+    if (button) {
+        updateButtonIcon(button, targetTable !== deselectedTable)
+    }
+}
+
+const addButtonEventListeners = () => {
+    document.querySelectorAll('.table__button--move').forEach((button) => {
+        button.addEventListener('click', (event) => {
+            const row = event.target.closest('.table__row')
+            if (row) {
+                toggleRow(row)
+            }
+        })
+    })
+}
+
+addButtonEventListeners()
