@@ -7,28 +7,42 @@ phone.addEventListener(
 
 const cellAmount = document.querySelectorAll('.table__cell:nth-child(2)')
 
-cellAmount.forEach((cell) => {
+const setupCell = (cell) => {
     const decrementButton = cell.querySelector('.table__button--decrement')
     const incrementButton = cell.querySelector('.table__button--increment')
     const amountInput = cell.querySelector('.table__data')
 
-    amountInput.addEventListener(
-        'input',
-        () => (amountInput.value = amountInput.value.replace(/[^0-9]/g, ''))
-    )
+    if (amountInput) {
+        amountInput.addEventListener('input', () => sanitizeInput(amountInput))
+        amountInput.addEventListener('focus', () => amountInput.select())
+    }
 
-    amountInput.addEventListener('focus', () => amountInput.select())
+    if (decrementButton)
+        decrementButton.addEventListener('click', () => decrement(amountInput))
 
-    decrementButton.addEventListener('click', () => {
-        let currentValue = parseInt(amountInput.value, 10) || 0
-        amountInput.value = Math.max(1, currentValue - 1)
-    })
+    if (incrementButton)
+        incrementButton.addEventListener('click', () => increment(amountInput))
+}
 
-    incrementButton.addEventListener('click', () => {
-        let currentValue = parseInt(amountInput.value, 10) || 0
-        amountInput.value = currentValue + 1
-    })
-})
+const sanitizeInput = (input) => {
+    let sanitizedValue = input.value.replace(/[^0-9]/g, '')
+    sanitizedValue = sanitizedValue === '' ? '1' : sanitizedValue
+    input.value = sanitizedValue
+}
+
+const getValue = (input) => parseInt(input.value, 10) || 1
+
+const decrement = (amountInput) => {
+    const currentValue = getValue(amountInput)
+    amountInput.value = Math.max(1, currentValue - 1)
+}
+
+const increment = (amountInput) => {
+    const currentValue = getValue(amountInput)
+    amountInput.value = currentValue + 1
+}
+
+cellAmount.forEach((cell) => setupCell(cell))
 
 const typeWork = {
     piped: [33, 37, 40, 43, 44, 52, 64, 66],
@@ -71,20 +85,24 @@ const moveRows = (checkboxId, isChecked) => {
         if (row) {
             const targetTable = isChecked ? selectedTable : deselectedTable
             targetTable.appendChild(row)
+            row.style.display = ''
             const button = row.querySelector('.table__button--move')
             updateButtonIcon(button, targetTable !== deselectedTable)
         }
     })
 }
 
-document.querySelectorAll('.form__checkbox--task').forEach((checkbox) => {
+const taskCheckbox = document.querySelectorAll('.form__checkbox--task')
+const moveButton = document.querySelectorAll('.table__button--move')
+
+taskCheckbox.forEach((checkbox) => {
     moveRows(checkbox.id, checkbox.checked)
     checkbox.addEventListener('change', (event) => {
         moveRows(event.target.id, event.target.checked)
     })
 })
 
-document.querySelectorAll('.table__button--move').forEach((button) => {
+moveButton.forEach((button) => {
     button.addEventListener('click', (event) => {
         const row = event.target.closest('.table__row')
         if (row) {
@@ -147,15 +165,22 @@ const baseNode = document.getElementById('67')
 
 buttonAddNew.addEventListener('click', () => {
     if (inputSearch.value.trim().length > 0) {
-        const newNode = baseNode.cloneNode(true)
-        newNode.removeAttribute('id')
-        newNode.firstElementChild.textContent = inputSearch.value
-        selectedTable.appendChild(newNode)
+        const nodeCloned = baseNode.cloneNode(true)
+        nodeCloned.removeAttribute('id')
+        nodeCloned.firstElementChild.textContent = inputSearch.value
+        nodeCloned.style.display = ''
+        const deleteRowButton = nodeCloned.querySelector('.table__button--move')
+        deleteRowButton.addEventListener('click', () => {
+            nodeCloned.remove()
+        })
+
+        updateButtonIcon(deleteRowButton, true)
+        setupCell(nodeCloned)
+
+        selectedTable.appendChild(nodeCloned)
+
         inputSearch.value = ''
         updateRowVisibility('')
         inputSearch.focus()
     }
-
-    
-
 })
