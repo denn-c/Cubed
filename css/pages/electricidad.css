@@ -22,12 +22,9 @@
 }
 
 .form__task {
-    box-shadow: var(--neumorphism-raised);
-    border-radius: var(--radio);
     padding: 0.5em;
     display: flex;
     gap: 0.5em;
-    margin-bottom: 1em;
 }
 
 .form__table-box {

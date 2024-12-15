@@ -74,6 +74,13 @@ const updateButtonIcon = (button, isDeselected) => {
     }
 }
 
+const changeVisibility = () => {
+    selectedTable.parentElement.parentElement.style.display = selectedTable
+        .childNodes.length
+        ? ''
+        : 'none'
+}
+
 const moveRows = (checkboxId, isChecked) => {
     const rowsToMove = typeWork[checkboxId]
     if (!rowsToMove) return
@@ -88,6 +95,7 @@ const moveRows = (checkboxId, isChecked) => {
             row.style.display = ''
             const button = row.querySelector('.table__button--move')
             updateButtonIcon(button, targetTable !== deselectedTable)
+            changeVisibility()
         }
     })
 }
@@ -111,6 +119,7 @@ moveButton.forEach((button) => {
                     ? selectedTable
                     : deselectedTable
             targetTable.appendChild(row)
+            changeVisibility()     
             updateButtonIcon(button, targetTable !== deselectedTable)
         }
     })
@@ -172,6 +181,7 @@ buttonAddNew.addEventListener('click', () => {
         const deleteRowButton = nodeCloned.querySelector('.table__button--move')
         deleteRowButton.addEventListener('click', () => {
             nodeCloned.remove()
+            changeVisibility()
         })
 
         updateButtonIcon(deleteRowButton, true)
@@ -181,6 +191,7 @@ buttonAddNew.addEventListener('click', () => {
 
         inputSearch.value = ''
         updateRowVisibility('')
+        changeVisibility()
         inputSearch.focus()
     }
 })
